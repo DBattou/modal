@@ -1,24 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+import Modal from "react-modal";
 
 function App() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  console.log(modalIsOpen);
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)"
+    }
+  };
+
+  Modal.setAppElement("#root");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <button className="OpenModalButton" onClick={() => setModalIsOpen(true)}>
+        Ouvrir modal
+      </button>
+      {modalIsOpen && (
+        <Modal
+          isOpen={modalIsOpen}
+          // onAfterOpen={afterOpenModal}
+          onRequestClose={() => setModalIsOpen(false)}
+          style={customStyles}
+          contentLabel="Example Modal"
+          shouldCloseOnOverlayClick={false}
         >
-          Learn React
-        </a>
-      </header>
+          {/* <h2 ref={subtitle => (subtitle = subtitle)}>Hello</h2> */}
+          <button onClick={() => setModalIsOpen(false)}>close</button>
+          <div>I am a modal</div>
+        </Modal>
+      )}
     </div>
   );
 }
