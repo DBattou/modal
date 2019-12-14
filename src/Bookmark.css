@@ -1,0 +1,22 @@
+.Bookmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 300px;
+  border: 3px solid blue;
+  background: rgba(255, 0, 0, 0.4);
+  border-radius: 3px;
+  position: relative;
+  /* opacity: 0.7; */
+  margin: 10px;
+}
+
+.BookmarkText {
+  position: relative;
+  /* top: 50%;
+  left: 50%;
+  transform: translateY(-50%); */
+  transform: rotate(-90deg);
+  /* transform: translateX(-50%); */
+}

@@ -1,0 +1,19 @@
+.Header {
+  height: 100px;
+  width: 100%;
+  border: 3px solid blue;
+  background: rgba(255, 0, 0, 0.4);
+  border-radius: 3px;
+  position: relative;
+  /* opacity: 0.7; */
+  margin: 10px;
+}
+
+.Title {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  /* transform: translateX(-50%); */
+}

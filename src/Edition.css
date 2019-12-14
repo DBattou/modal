@@ -1,0 +1,31 @@
+.Edition {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  border: 3px solid blue;
+  background: rgba(255, 0, 0, 0.4);
+  border-radius: 3px;
+  margin: 10px;
+}
+
+/* .DeviceContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 3px solid blue;
+} */
+
+.EditionText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* top: 50%;
+  left: 50%;
+  transform: translateY(-50%); */
+  /* transform: rotate(-90deg); */
+  /* transform: translateX(-50%); */
+}
